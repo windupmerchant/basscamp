@@ -8,6 +8,7 @@ gem 'rails', '3.2.7'
 # gem 'sqlite3'
 
 gem 'pg'
+gem 'bootstrap-sass'
 
 group :development, :test do
 
