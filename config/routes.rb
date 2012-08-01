@@ -1,4 +1,15 @@
 Basscamp::Application.routes.draw do
+
+  resources :items
+
+  resources :lists
+
+  resources :projects
+
+  devise_for :users
+
+  root :to => "projects#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
