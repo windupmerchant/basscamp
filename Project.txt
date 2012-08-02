@@ -1,0 +1,57 @@
+Projects
+Users
+Accounts
+To-dos
+
+Users
+- id
+- Projects
+  - id
+  - Lists
+    - id
+    - belongs_to :created_by, :class_name => "User"
+    - Items
+      - body
+      - created_by
+      - assigned_to
+
+
+class Project
+  has_many :lists
+  has_many :items, :through => :lists
+end
+
+class List
+  belongs_to :project
+  has_many :items
+end
+
+class Item
+  belongs_to :project, :through => :lists
+  belongs_to :list
+end
+
+"________________
+Project Dashboard
+Overall Dashboard
+Cross-project Todos
+User details
+Account details
+_____________________________
+User should be able to Signup
+... add one or more projects per account
+... set projects to public or private
+... add one or more todo lists per project
+... add multiple todo items per todo list
+... invite other people to project as members
+... see the projects I'm a member of
+... assign todos to project members
+
+Project Member should be prevented from
+... CRUD todo Lists
+... deleting others' todo items
+
+______________________________________
+http://railsapps.github.com/twitter-bootstrap-rails.html
+https://github.com/RailsApps/rails3-bootstrap-devise-cancan
+https://github.com/plataformatec/devise/wiki

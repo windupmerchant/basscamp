@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Body:</b>
+  <%= @item.body %>
+</p>
+
+<p>
+  <b>Assigned to:</b>
+  <%= @item.assigned_to %>
+</p>
+
+<p>
+  <b>Completed at:</b>
+  <%= @item.completed_at %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @item.user %>
+</p>
+
+<p>
+  <b>List:</b>
+  <%= @item.list %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
